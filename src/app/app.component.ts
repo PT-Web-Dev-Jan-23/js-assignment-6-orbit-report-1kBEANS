@@ -23,15 +23,15 @@ export class AppComponent {
 				let fetchedSatellites = data.satellites;
 				// loop over satellites
 				for(let i=0; i < fetchedSatellites.length; i++) {
-					// create a Satellite object 
+					// create a Satellite object
 					let satellite = new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
-					// add the new Satellite object to sourceList 
+					// add the new Satellite object to sourceList
 					this.sourceList.push(satellite);
 				 }
 
 				 // make a copy of the sourceList to be shown to the user
 				 this.displayList = this.sourceList.slice(0);
-	  
+
 			}.bind(this));
 		}.bind(this));
 
